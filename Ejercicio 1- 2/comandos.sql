@@ -1,1 +1,10 @@
-
+CREATE TABLE alumnos (id, nombre, edad);
+INSERT INTO alumnos (id, nombre, edad) VALUES ('1', 'Ana', '20');
+INSERT INTO alumnos (id, nombre, edad) VALUES ('2', 'Luis', '22');
+SELECT * FROM alumnos;
+SELECT nombre FROM alumnos WHERE id = '1';
+UPDATE alumnos SET nombre = 'Ana Maria' WHERE id = '1';
+SELECT * FROM alumnos;
+DELETE FROM alumnos WHERE id = '2';
+SELECT * FROM alumnos;
+DROP TABLE alumnos;
