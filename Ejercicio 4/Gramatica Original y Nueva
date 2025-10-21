@@ -1,0 +1,18 @@
+ORIGINAL:
+1. E → E + T | T
+2. T → T * F | F
+3. F → (E) | id
+
+PASA POR:
+E → T E'
+E' → + T E' | ε
+T → F T'
+T' → * F T' | ε
+F → (E) | id
+
+NUEVA:
+E  → T E'
+E' → + T E' | ε
+T  → F T'
+T' → * F T' | ε
+F  → (E) | id
