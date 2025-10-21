@@ -1,0 +1,22 @@
+kali@kali:~/mini_db$ make
+bison -d db.y
+flex db.l
+gcc -o db db.tab.c lex.yy.c -lfl
+kali@kali:~/mini_db$ ./db < comandos.sql
+Tabla 'alumnos' creada con columnas: id, nombre, edad
+Insertado en 'alumnos': id='1' nombre='Ana' edad='20'
+Insertado en 'alumnos': id='2' nombre='Luis' edad='22'
+Seleccionando todos los registros de 'alumnos':
+id='1' nombre='Ana' edad='20'
+id='2' nombre='Luis' edad='22'
+Seleccionando 'nombre' de 'alumnos' donde id='1':
+nombre='Ana'
+Actualizando 'alumnos' set nombre='Ana Maria' donde id='1'
+Seleccionando todos los registros de 'alumnos':
+id='1' nombre='Ana Maria' edad='20'
+id='2' nombre='Luis' edad='22'
+Eliminando de 'alumnos' donde id='2'
+Seleccionando todos los registros de 'alumnos':
+id='1' nombre='Ana Maria' edad='20'
+Eliminando tabla 'alumnos'
+kali@kali:~/mini_db$
