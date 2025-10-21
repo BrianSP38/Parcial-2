@@ -1,0 +1,16 @@
+PREDICCION:
+| No terminal | Entrada | Producción  |
+| ----------- | ------- | ----------- |
+| E           | id      | E → T E'    |
+| E           | (       | E → T E'    |
+| E'          | +       | E' → + T E' |
+| E'          | )       | E' → ε      |
+| E'          | $       | E' → ε      |
+| T           | id      | T → F T'    |
+| T           | (       | T → F T'    |
+| T'          | *       | T' → * F T' |
+| T'          | +       | T' → ε      |
+| T'          | )       | T' → ε      |
+| T'          | $       | T' → ε      |
+| F           | id      | F → id      |
+| F           | (       | F → (E)     |
